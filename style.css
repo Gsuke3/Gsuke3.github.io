@@ -97,3 +97,35 @@
 
     flex: 1; /* ←これが超重要 */
   }
+  /* =====================
+   📱 スマホ用サイズ調整
+  ===================== */
+  @media (max-width: 600px) {
+
+    .game {
+      width: 95%;
+      padding: 25px;
+    }
+
+    .thumb {
+      width: 220px;
+      height: 150px;
+    }
+
+    .info h2 {
+      font-size: 24px;
+    }
+
+    .play-btn {
+      font-size: 18px;
+      padding: 10px 24px;
+    }
+
+    h1 {
+      font-size: 42px;
+    }
+
+    .logo {
+      width: 180px;
+    }
+  }
