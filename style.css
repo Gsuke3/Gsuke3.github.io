@@ -98,34 +98,31 @@
     flex: 1; /* ←これが超重要 */
   }
   /* =====================
-   📱 スマホ用サイズ調整
+   📱 スマホ用サイズ調整（微調整版）
   ===================== */
   @media (max-width: 600px) {
 
     .game {
-      width: 95%;
-      padding: 25px;
+      flex-direction: column; /* ←横→縦 */
+      align-items: center;
+      text-align: center;
     }
 
     .thumb {
-      width: 220px;
-      height: 150px;
+      width: 100%;       /* ←画面いっぱい */
+      height: auto;      /* ←比率維持 */
+      max-width: 350px;  /* ←デカすぎ防止 */
+    }
+
+    .info {
+      align-items: center;
     }
 
     .info h2 {
-      font-size: 24px;
+      font-size: 22px;
     }
 
     .play-btn {
       font-size: 18px;
-      padding: 10px 24px;
-    }
-
-    h1 {
-      font-size: 42px;
-    }
-
-    .logo {
-      width: 180px;
     }
   }
