@@ -2,68 +2,75 @@
 <html lang="ja">
 <head>
   <meta charset="UTF-8">
-  <title>G×G World</title>
+  <title>Gsuke Game World</title>
+
   <link rel="icon" href="icon-512.png">
   <link rel="apple-touch-icon" href="icon-512.png">
-  <style>
-    body {
-      margin: 0;
-      background: #0d0d0d;
-      color: white;
-      font-family: sans-serif;
-      text-align: center;
-    }
+  <link rel="stylesheet" href="style.css">
 
-    h1 {
-      margin-top: 40px;
-      font-size: 36px;
-    }
-
-    .game {
-      margin: 30px auto;
-      padding: 20px;
-      width: 320px;
-      background: #1a1a1a;
-      border-radius: 12px;
-    }
-
-    a {
-      color: #00ccff;
-      text-decoration: none;
-      font-size: 20px;
-    }
-
-    a:hover {
-      text-decoration: underline;
-    }
-  </style>
 </head>
+
 <body>
 
-<h1>🎮 Gsuke Game World</h1>
-
-<div class="game">
-  <h2>Copy Run</h2>
-  <a href="https://Gsuke3.github.io/copy-run/" target="_blank">
-    ▶ Play
-  </a>
+<!-- =====================
+     🔥 ヘッダー
+===================== -->
+<div class="header">
+  <img src="icon-512.png" class="logo">
+  <h1>Gsuke Game World</h1>
 </div>
+
+<!-- =====================
+     🎮 ゲーム一覧
+===================== -->
+<div class="container">
+
+  <!-- Copy Run -->
   <div class="game">
-  <h2>Space Grow</h2>
-  <a href="https://Gsuke3.github.io/space-grow/" target="_blank">
-    ▶ Play
-  </a>
-</div>
-<div class="game">
-  <h2>NEON</h2>
-  <a href="https://gsuke3.github.io/Neon/" target="_blank">
-    ▶ Play
-  </a>
-</div>
+    <img src="thumb-copyrun.png" class="thumb">
 
-<div class="game">
-  <h2>Next Game</h2>
-  <p>Coming soon...</p>
+    <div class="info">
+      <h2>Copy Run</h2>
+      <a class="play-btn" href="https://Gsuke3.github.io/copy-run/" target="_blank">
+        ▶ Play
+      </a>
+    </div>
+  </div>
+
+  <!-- Space Grow -->
+  <div class="game">
+    <img src="thumb-spacegrow.png" class="thumb">
+
+    <div class="info">
+      <h2>Space Grow</h2>
+      <a class="play-btn" href="https://Gsuke3.github.io/space-grow/" target="_blank">
+        ▶ Play
+      </a>
+    </div>
+  </div>
+
+  <!-- NEON -->
+  <div class="game">
+    <img src="thumb-neon.png" class="thumb">
+
+    <div class="info">
+      <h2>NEON</h2>
+      <a class="play-btn" href="https://gsuke3.github.io/Neon/" target="_blank">
+        ▶ Play
+      </a>
+    </div>
+  </div>
+
+  <!-- Next Game -->
+  <div class="game">
+    <img src="thumb-comingsoon.png" class="thumb">
+
+    <div class="info">
+      <h2>Next Game</h2>
+      <p>Coming soon...</p>
+    </div>
+  </div>
+
 </div>
 
 </body>
