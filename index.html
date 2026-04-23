@@ -2,89 +2,80 @@
 <html lang="ja">
 <head>
   <meta charset="UTF-8">
-  <title>G×G World</title>
+  <title>Gsuke Game World</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <link rel="icon" href="icon-512.png">
   <link rel="apple-touch-icon" href="icon-512.png">
+  <link rel="manifest" href="manifest.json">
   <link rel="stylesheet" href="style.css">
-
 </head>
 
 <body>
 
 <!-- =====================
+     🌌 背景レイヤー
+===================== -->
+<div class="bg"></div>
+
+<!-- =====================
      🔥 ヘッダー
 ===================== -->
-<div class="header">
+<header class="header">
   <img src="icon-512.png" class="logo">
   <h1>Gsuke Game World</h1>
-</div>
+</header>
 
 <!-- =====================
      🎮 ゲーム一覧
 ===================== -->
-<div class="container">
+<main class="container">
 
-  <!-- Copy Run -->
   <div class="game">
     <img src="thumb-copyrun.png" class="thumb">
-
     <div class="info">
       <h2>Copy Run</h2>
-      <a class="play-btn" href="https://Gsuke3.github.io/copy-run/" target="_blank">
-        ▶ Play
-      </a>
+      <p class="desc">過去の自分を乗り越えていくゲーム</p>
+      <a class="play-btn" href="https://Gsuke3.github.io/copy-run/" target="_blank">▶ Play</a>
     </div>
   </div>
 
-  <!-- Space Grow -->
   <div class="game">
     <img src="thumb-spacegrow.png" class="thumb">
-
     <div class="info">
       <h2>Space Grow</h2>
-      <a class="play-btn" href="https://Gsuke3.github.io/space-grow/" target="_blank">
-        ▶ Play
-      </a>
+      <p class="desc">地球でっかくなるだけ</p>
+      <a class="play-btn" href="https://Gsuke3.github.io/space-grow/" target="_blank">▶ Play</a>
     </div>
   </div>
 
-  <!-- NEON -->
   <div class="game">
     <img src="thumb-neon.png" class="thumb">
-
     <div class="info">
       <h2>NEON</h2>
-      <a class="play-btn" href="https://gsuke3.github.io/Neon/" target="_blank">
-        ▶ Play
-      </a>
+      <p class="desc">ネオンっぽい空間で弾幕避けるだけ</p>
+      <a class="play-btn" href="https://gsuke3.github.io/Neon/" target="_blank">▶ Play</a>
     </div>
   </div>
 
-    <!-- RED WALL -->
   <div class="game">
     <img src="thumb-redwall.png" class="thumb">
-
     <div class="info">
       <h2>RED WALL</h2>
-      <a class="play-btn" href="https://gsuke3.github.io/redwall/" target="_blank">
-        ▶ Play
-      </a>
+      <p class="desc">赤い壁迫ってくるから逃げるだけ</p>
+      <a class="play-btn" href="https://gsuke3.github.io/redwall/" target="_blank">▶ Play</a>
     </div>
   </div>
 
-  <!-- Next Game -->
   <div class="game">
     <img src="thumb-comingsoon.png" class="thumb">
-
     <div class="info">
       <h2>Next Game</h2>
-      <p>Coming soon...</p>
+      <p class="desc">次回作、準備中…</p>
     </div>
   </div>
 
-</div>
+</main>
 
 </body>
 </html>

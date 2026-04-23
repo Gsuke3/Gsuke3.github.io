@@ -1,128 +1,123 @@
+/* =====================
+   🌌 全体
+===================== */
+body {
+  margin: 0;
+  font-family: sans-serif;
+  color: white;
+  background: #0d0d0d;
+}
 
-    body {
-      margin: 0;
-      background: #0d0d0d;
-      color: white;
-      font-family: sans-serif;
-      text-align: center;
-    }
+/* =====================
+   🌌 背景（うっすらネオン）
+===================== */
+.bg {
+  position: fixed;
+  inset: 0;
+  z-index: -1;
 
-    /* =====================
-       🔥 ヘッダー
-    ===================== */
-    .header {
-      margin-top: 40px;
-    }
+  background:
+    radial-gradient(circle at 20% 30%, rgba(0,200,255,0.08), transparent 40%),
+    radial-gradient(circle at 80% 70%, rgba(255,0,120,0.08), transparent 40%),
+    #0d0d0d;
+}
 
-    .logo {
-      width: 140px;
-      margin-bottom: 10px;
-    }
+/* =====================
+   🔥 ヘッダー
+===================== */
+.header {
+  text-align: center;
+  padding: 40px 20px 10px;
+}
 
-    h1 {
-      font-size: 36px;
-      margin: 0;
-      text-shadow: 0 0 10px #00ccff;
-    }
+.logo {
+  width: 120px;
+}
 
-    /* =====================
-       🎮 ゲームカード
-    ===================== */
-    .container {
-      margin-top: 40px;
-    }
+h1 {
+  margin: 10px 0 0;
+  font-size: 32px;
+  text-shadow: 0 0 12px #00ccff;
+}
 
-    .game {
-      margin: 20px auto;
-      padding: 20px;
-      width: 320px;
-      background: #1a1a1a;
-      border-radius: 16px;
-      transition: 0.2s;
-    }
+/* =====================
+   🎮 グリッド
+===================== */
+.container {
+  display: grid;
+  gap: 25px;
+  padding: 20px;
+  max-width: 1100px;
+  margin: auto;
 
-    .game:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 0 15px rgba(0, 200, 255, 0.4);
-    }
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+}
 
-    .game h2 {
-      margin-bottom: 10px;
-    }
+/* =====================
+   🎮 カード
+===================== */
+.game {
+  display: flex;
+  flex-direction: column;
 
-    .play-btn {
-      display: inline-block;
-      margin-top: 10px;
-      padding: 8px 20px;
-      border-radius: 20px;
-      background: #00ccff;
-      color: black;
-      text-decoration: none;
-      font-weight: bold;
-    }
+  background: #1a1a1a;
+  border-radius: 16px;
+  overflow: hidden;
 
-    .play-btn:hover {
-      background: #00aacc;
-    }
-   /* =====================
-   🎮 横カード用
-   ===================== */
+  transition: 0.25s;
+}
 
-   .game {
-     display: flex;
-     align-items: center;
-     gap: 15px;
+.game:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 0 20px rgba(0, 200, 255, 0.25);
+}
 
-     padding: 15px;
-     width: 500px;
-     max-width: 90%;
+/* =====================
+   🖼 サムネ
+===================== */
+.thumb {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  object-fit: contain; /* ←これに変える */
+  background: #000;    /* ←余白が黒になる */
+}
 
-     background: #1a1a1a;
-     border-radius: 16px;
-     transition: 0.2s;
-     align-items: stretch; /* ←これがミソ */
-   }
+/* =====================
+   📄 情報
+===================== */
+.info {
+  padding: 15px;
+  text-align: left;
+}
 
-   .thumb {
-     width: 300px;
-     height: 200px;
-     object-fit: cover;
-     border-radius: 10px;
-   }
+.info h2 {
+  margin: 0 0 8px;
+}
 
-   .info {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+/* 説明文 */
+.desc {
+  font-size: 14px;
+  color: #aaa;
+  line-height: 1.5;
+  margin-bottom: 12px;
+}
 
-    flex: 1; /* ←これが超重要 */
-  }
-  /* =====================
-   📱 スマホ用サイズ調整（微調整版）
-  ===================== */
-  @media (max-width: 600px) {
+/* =====================
+   ▶ ボタン
+===================== */
+.play-btn {
+  display: inline-block;
+  padding: 8px 16px;
+  border-radius: 20px;
 
-    .game {
-      flex-direction: column; /* ←横→縦 */
-      align-items: center;
-      text-align: center;
-    }
+  background: #00ccff;
+  color: black;
+  font-weight: bold;
+  text-decoration: none;
 
-    .thumb {
-      width: 100%;       /* ←画面いっぱい */
-      height: auto;      /* ←比率維持 */
-      max-width: 350px;  /* ←デカすぎ防止 */
-    }
+  transition: 0.2s;
+}
 
-    .info {
-      align-items: center;
-    }
-
-    .info h2 {
-      font-size: 22px;
-    }
-
-    .play-btn {
-      font-size: 18px;
-    }
-  }
+.play-btn:hover {
+  background: #00aacc;
+}
